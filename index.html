@@ -10,9 +10,12 @@
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" defer></script>
+    
 
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -28,7 +31,7 @@
 <main class="main-content">
     <section class="gift">
         <div class="container">
-            <h1 class="gift__title">Поздравьте близкого человека с праздником!</h1>
+            <h1 class="gift__title">Поздравьте близкого человека с&nbsp;праздником!</h1>
             <p class="gift__description">Выберите открытку и получатель получит ее на свой телефон</p>
         </div>
         <div class="gift__wrapper">
@@ -69,28 +72,28 @@
             <form class="gift__form form">
                 <label  class="form__label">
                     <span class="form__label-text">от кого</span>
-                    <input type="text" class="form__label-feild" name="sender_name">
+                    <input type="text" class="form__field" name="sender_name">
                 </label>
                 <label  class="form__label">
                     <span class="form__label-text">телефон отправителя</span>
-                    <input type="text" class="form__label-feild" name="sender_phone">
+                    <input type="text" class="form__field form__field--phone" name="sender_phone">
                 </label>
                 <label class="form__label">
                     <span class="form__label-text">кому</span>
-                    <input type="text" class="form__label-feild" name="receiver_name">
+                    <input type="text" class="form__field" name="receiver_name">
                 </label>
                 <label class="form__label">
-                    <span class="form__label-text">поздравительный текст</span>
-                    <input type="text" class="form__label-feild" name="receiver_phone" >
+                    <span class="form__label-text">телефон получателя</span>
+                    <input type="text" class="form__field form__field--phone" name="receiver_phone" >
                 </label>
 
                 <label class="form__label form__label-textarea">
-                    <span class="form__label-text">телефон получателя</span>
-                    <textarea  class="form__feild form__field--textarea" name="message" placeholder="напишите тёплые слова"></textarea>
+                    <span class="form__label-text">поздравительный текст</span>
+                    <textarea  class="form__field form__textarea" name="message" placeholder="напишите тёплые слова"></textarea>
                 </label>
-                <button type="submit" class="form__button" disabled>Отправить</button>
+                <button type="submit" class="form__button">Отправить</button>
             </form>
-        </div>
+        </div> 
     </section>
 </main>
 
